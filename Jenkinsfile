@@ -15,7 +15,7 @@ pipeline {
     }
     stage('accept') {
       steps {
-        input(message: 'accept publish', id: '1', ok: 'yes', submitter: 'test', submitterParameter: 'testParam')
+        input(message: 'accept publish', id: '1', submitter: 'test', submitterParameter: 'testParam')
       }
     }
   }
