@@ -8,7 +8,8 @@ pipeline {
     }
     stage('error') {
       steps {
-        sh '''chmod +x gradlew
+        sh '''PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+chmod +x gradlew
 ./gradlew clean'''
       }
     }
