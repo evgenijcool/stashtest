@@ -5,6 +5,8 @@ pipeline {
       steps {
         echo 'git'
         echo 'next git'
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/evgenijcool/stashtest.git']]])
+
         git(url: 'https://github.com/evgenijcool/stashtest.git', branch: 'master', changelog: true, poll: true)
       }
     }
