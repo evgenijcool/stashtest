@@ -13,5 +13,10 @@ pipeline {
         echo 'test step2'
       }
     }
+    stage('accept') {
+      steps {
+        input(message: 'accept publish', id: '1', ok: 'yes', submitter: 'test', submitterParameter: 'testParam')
+      }
+    }
   }
 }
