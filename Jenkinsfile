@@ -6,9 +6,10 @@ pipeline {
         echo 'build'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
-        sh './gradlew build'
+        sh '''chmod +x gradlew
+./gradlew build'''
       }
     }
   }
