@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         int r = 5;
-        r = 10;
+        r = 10;    
+        
         r = 2;
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
