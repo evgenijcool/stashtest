@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'git'
         echo 'next git'
+        git(url: 'https://github.com/evgenijcool/stashtest.git', branch: 'development', changelog: true, poll: true)
       }
     }
     stage('test') {
