@@ -5,9 +5,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
         String s = "Small fix";
         int r = 5;
         r = 10;
-        r = 10;    
-                r = 2;
-        
+        r = 10;
+        r = 2;
+
+        String s2 = "feature changes";
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        ((TextView) findViewById(R.id.text)).setText("teststststst ONCREATE");
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        ((TextView) findViewById(R.id.text)).setText("teststststst ONSTART");
     }
 
     @Override
@@ -58,4 +68,9 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+}
+
+
+class FeatureClass {
+    private String test = "";
 }
