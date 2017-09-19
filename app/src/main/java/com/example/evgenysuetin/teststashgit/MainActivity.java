@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+        String s = "Small fix";
         int r = 5;
         r = 10;
         r = 10;
