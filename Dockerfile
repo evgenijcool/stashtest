@@ -1,4 +1,4 @@
-FROM posohof/java
+﻿FROM posohof/java
 
 #inspired by Maik Hummel <m@ikhummel.com>
 MAINTAINER Ivan Posokhov <posohof@gmail.com>
