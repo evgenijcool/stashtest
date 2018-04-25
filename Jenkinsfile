@@ -1,12 +1,8 @@
 pipeline {
   agent {
-        
 	node {
-  
           label 'test'
-   
      	}
-   
   }
   stages {
     stage('git') {
